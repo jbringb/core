@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: zenith
+  config:
+    import: "optional:file:${ROOT_DIR}/.env"
+  r2dbc:
+    url: r2dbc:postgresql://aws-1-eu-west-1.pooler.supabase.com:5432/postgres
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    pool:
+      enabled: true
